@@ -7,7 +7,7 @@
 
         <div class="inner-wrapper">
             <div class="slide"><img src="img/slider1.jpg" alt=""></div>
-            <div class="slide"><img src="img/slider2.jpg" alt=""></div>
+            <div class="slide"><img src="img/slider2.avif" alt=""></div>
             <div class="slide"><img src="img/slider3.png" alt=""></div>
             <div class="slide"><img src="img/slider4.avif" alt=""></div>
         </div>
