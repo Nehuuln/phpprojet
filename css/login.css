@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    color: white;
+}
+
+.login .login-form-container {
+    background-color: #141519;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.login .login-form-container h2 {
+    text-align: center;
+}
+
+.login-form-container input[type="email"]::placeholder,
+.login-form-container input[type="password"]::placeholder {
+    color: rgb(56, 52, 52);
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+.register .register-form-container {
+    background-color: #141519;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.register .register-form-container h2 {
+    text-align: center;
+}
+
+.login .login-form-container div,
+.register .register-form-container div {
+    margin-bottom: 10px;
+}
+
+.login .login-form-container label,
+.register .register-form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login .login-form-container input[type="email"],
+.login .login-form-container input[type="password"],
+.register .register-form-container input[type="text"],
+.register .register-form-container input[type="email"],
+.register .register-form-container input[type="password"],
+.login .login-form-container button[type="submit"],
+.register .register-form-container input[type="submit"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 16px);
+}
+
+.login .login-form-container button[type="submit"],
+.register .register-form-container input[type="submit"] {
+    background-color: #86e8d0;
+    color: black;
+    cursor: pointer;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.login .login-form-container button[type="submit"]:hover,
+.register .register-form-container input[type="submit"]:hover {
+    background-color: #86e8d0;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: red;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-mail,
+.login-password,
+.register-name,
+.register-mail,
+.register-password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-mail input,
+.login-password input,
+.register-name input,
+.register-mail input,
+.register-password input {
+    padding-left: 35px; 
+}
+
+.icon-container {
+    position: relative;
+    margin-right: 25px; 
+}
+
+.icon-container i {
+    position: absolute;
+    left: 0;
+}
+
+.login-mail i,
+.register-mail i {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login-password i,
+.register-password i,
+.register-name i {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.already-member {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.already-member p {
+    font-size: 14px;
+    color: white; 
+}
+
+.already-member a {
+    color: #86e8d0;
+    text-decoration: none;
+}
+
+.already-member a:hover {
+    text-decoration: underline;
+}
+
+.not-member {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.not-member p {
+    font-size: 14px;
+    color: white; 
+}
+
+.not-member a {
+    color: #86e8d0;
+    text-decoration: none;
+}
+
+.not-member a:hover {
+    text-decoration: underline;
+}
+

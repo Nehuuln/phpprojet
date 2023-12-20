@@ -1,0 +1,35 @@
+.video-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.music-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+
+.popup audio {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin: 5px 0;
+}
+
