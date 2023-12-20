@@ -14,8 +14,8 @@ if ($page == 'main') {
     include('views/a la une.php');
 } elseif ($page == 'bibliotheque') {
     include('views/bibliotheque.php');
-} elseif ($page == 'favoris') {
-    include('views/favoris.php');
+} elseif ($page == 'ajouter') {
+    include('views/ajouter.php');
 } elseif ($page == 'deconnexion') {
     include('views/deconnexion.php');
 } else {

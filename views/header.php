@@ -25,8 +25,6 @@ echo @$_GET['page'] === 'inscription' ? 'data-page="inscription"' : ''; ?>>
                     <li><a href="index.php?page=a_la_une" <?php echo ($_GET['page'] === 'a_la_une') ? 'class="active"' : ''; ?>><i
                                 class="fas fa-star"></i> A la une</a></li>
                     <li><a href="index.php?page=bibliotheque" <?php echo ($_GET['page'] === 'bibliotheque') ? 'class="active"' : ''; ?>><i class="fas fa-book"></i> Bibliothèque</a></li>
-                    <li><a href="index.php?page=favoris" <?php echo ($_GET['page'] === 'favoris') ? 'class="active"' : ''; ?>><i
-                                class="fas fa-heart"></i> Favoris</a></li>
                 </ul>
             </nav>
 

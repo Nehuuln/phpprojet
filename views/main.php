@@ -21,43 +21,30 @@
 
 <script>
     $(function () {
-
-        var inWrap = $('.inner-wrapper'),
-            $slide = $('.slide');
-
+        var inWrap = $('.inner-wrapper');
+        var slideWidth = $('.slide').width();
+        var slidesCount = $('.slide').length;
+        var currentSlide = 1;
 
         function slideNext() {
-
-            inWrap.animate({ left: '-200%' }, 200, function () {
-
-                inWrap.css('left', '-100%');
-
-                $('.slide').last().after($('.slide').first());
-
-            });
-
+            currentSlide = (currentSlide % slidesCount) + 1;
+            inWrap.css('transform', 'translateX(' + -(currentSlide - 1) * slideWidth + 'px)');
         }
-        sliderInterval = setInterval(slideNext, 4000);
+
+        var sliderInterval = setInterval(slideNext, 4000);
 
         $('.prev').on('click', function () {
-
-            inWrap.animate({ left: '0%' }, 200, function () {
-
-                inWrap.css('left', '-100%');
-
-                $('.slide').first().before($('.slide').last());
-
-            });
+            clearInterval(sliderInterval);
+            currentSlide = (currentSlide - 2 + slidesCount) % slidesCount + 1;
+            inWrap.css('transform', 'translateX(' + -(currentSlide - 1) * slideWidth + 'px)');
         });
 
         $('.next').on('click', function () {
-
             clearInterval(sliderInterval);
-
             slideNext();
-
         });
     });
+
 </script>
 
 <!--

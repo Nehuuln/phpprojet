@@ -12,7 +12,8 @@
                     Votre navigateur ne supporte pas l'audio HTML5.
                 </audio>
                 <p class="music-info" style="display: none;">
-                    <?php echo $music['nom']; ?> - Date : <?php echo $music['date']; ?>
+                    <?php echo $music['nom']; ?> - Date :
+                    <?php echo $music['date']; ?>
                 </p>
             </div>
         </div>
@@ -28,41 +29,41 @@
 </div>
 
 <script>
-    
-    $(document).ready(function() {
-    $('.music-image').click(function() {
-        const isPopupVisible = $('.bottom-player').is(':visible');
 
-        if (!isPopupVisible || $(this).hasClass('active')) {
-            $('.bottom-player').slideDown();
-            $(this).addClass('active');
-        } else {
-            $('.bottom-player').slideUp();
-            $(this).removeClass('active');
-        }
+    $(document).ready(function () {
+        $('.music-image').click(function () {
+            const isPopupVisible = $('.bottom-player').is(':visible');
 
-        const audioSrc = $(this).next('.popup').find('.music-player source').attr('src');
-        const musicInfo = $(this).next('.popup').find('.music-info').text();
+            if (!isPopupVisible || $(this).hasClass('active')) {
+                $('.bottom-player').slideDown();
+                $(this).addClass('active');
+            } else {
+                $('.bottom-player').slideUp();
+                $(this).removeClass('active');
+            }
 
-        $('.bottom-music-player source').attr('src', audioSrc);
-        $('.bottom-music-player')[0].load();
-        $('.bottom-music-info').text(musicInfo);
-    });
+            const audioSrc = $(this).next('.popup').find('.music-player source').attr('src');
+            const musicInfo = $(this).next('.popup').find('.music-info').text();
 
-    $('.bottom-player audio').on('ended', function() {
-        $('.bottom-player').slideUp();
-        $('.music-image').removeClass('active');
-        $('.bottom-music-player source').attr('src', '');
-        $('.bottom-music-player')[0].load();
-        $('.bottom-music-info').text('');
-    });
+            $('.bottom-music-player source').attr('src', audioSrc);
+            $('.bottom-music-player')[0].load();
+            $('.bottom-music-info').text(musicInfo);
+        });
 
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.popup').length && !$(e.target).is('.music-image')) {
+        $('.bottom-player audio').on('ended', function () {
             $('.bottom-player').slideUp();
             $('.music-image').removeClass('active');
-        }
+            $('.bottom-music-player source').attr('src', '');
+            $('.bottom-music-player')[0].load();
+            $('.bottom-music-info').text('');
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.popup').length && !$(e.target).is('.music-image')) {
+                $('.bottom-player').slideUp();
+                $('.music-image').removeClass('active');
+            }
+        });
     });
-});
 
 </script>
