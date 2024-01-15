@@ -48,4 +48,5 @@ Afin que le site soit **100% fonctionnel** il faudra intégrer les bases de donn
 ### <p style="color: green">Retours d'expérience</p>
 Le projet PHP m'a permis de **développer plus d'automonie**, *découvrir comment fonctionne PHP* mais également l'**utilisation de la database**, connecter le code avec la database.  
 Une très bonne expérience qui m'a appris beaucoup de chose.
+
 ![GIFNICE](img/nice.gif)
